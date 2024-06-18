@@ -1,0 +1,298 @@
+
+.btn-holder{
+	display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.robot-container{
+	width: auto;
+	height: max-content;
+}
+@keyframes ball {
+	0% {
+		transform: rotate(360deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes head {
+	0% {
+		margin: -55px 45px 10px 15px;
+	}
+	50% {
+		margin: -65px 45px 10px 20px;
+	}
+}
+
+.universe {
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(to bottom, #f3f2b4 0%, rgba(245, 243, 118, 0.849) 100%);
+	height: 35vh;
+}
+
+
+.tattoine {
+	margin: auto;
+}
+
+.bb-8--shadow {
+	width: 170px;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.75);
+	position: absolute;
+	border-radius: 50%;
+	margin-top: -25px;
+	margin-left: 30px;
+}
+
+.bb-8--shadow--2 {
+	width: 150px;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.45);
+	position: absolute;
+	border-radius: 50%;
+	margin-top: -55px;
+	margin-left: 30px;
+	transform: rotate(-20deg);
+	transition: smooth;
+}
+.head {
+	width: 75px;
+	height: 35.5px;
+	border-radius: 50px 50px 0 0;
+	position: absolute;
+	margin: -55px 45px 10px 20px;
+	transform: rotate(0deg) translateX(-5px) translateY(15px);
+	// transform: rotate(-30deg) translateX(-50px) translateY(5px);
+	border: 5px solid #1c3c4f;
+	background: #fff;
+	z-index: 99999;
+	// animation-name: head;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 1s;
+
+	.eye {
+		background: #2b8aa9;
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: 5px solid #1c3c4f;
+		position: relative;
+		margin: 5px auto;
+	}
+}
+
+.ball-animation {
+	animation-name: ball;
+  }
+
+  .head-animation{
+	animation-name: head, head1;
+  }
+  .cooking {
+	padding: 5px;
+	color: #2b8aa9 !important;
+	font-weight: 700;
+	animation-name: filll;
+	width: 50%;
+	animation-duration: 3s; 
+	animation-iteration-count: infinite; 
+	transition:5s;
+	margin-top: 15px;
+  }
+  
+  .cooking2 {
+	padding: 5px;
+	color: #df0fb2 !important;
+	font-weight: 700;
+	animation-name: filll2;
+	animation-duration: 2s; 
+	animation-iteration-count: infinite; 
+	transition: 5s;
+	animation-timing-function: ease-in-out; 
+  }
+  
+
+  .cooking3 {
+	padding: 5px;
+	background: linear-gradient(to bottom, #f3f2b4 0%, rgb(170, 243, 182) 100%);
+	font-weight: 700;
+	color: rgb(9, 122, 47) !important;
+	animation-name: filll3;
+	animation-duration: 2s; 
+	animation-iteration-count: infinite; 
+	transition: 5s;
+	text-align: center;
+	animation-timing-function: ease-in-out; 
+	margin-bottom: 10px !important;
+  }
+
+
+  .cooking1 {
+	padding: 5px;
+	background: linear-gradient(to bottom, #f3f2b4 0%, rgb(170, 243, 182) 100%);
+	font-weight: 700;
+	color: rgb(9, 122, 47) !important;
+	animation-name: filll4;
+	animation-duration: 2s; 
+	animation-iteration-count: infinite; 
+	transition: 5s;
+	text-align: center;
+	animation-timing-function: ease-in-out; 
+	margin-bottom: 10px !important;
+  }
+
+  @keyframes filll {
+	0% {
+		transform: rotate(0deg);
+		opacity: 1
+	  }
+	  25% {
+		transform: rotate(-10deg);
+		opacity: 0.8;
+	  }
+	  75% {
+		  transform: rotate(10deg);
+		  opacity: 1;
+		}
+	  100% {
+		transform: rotate(0deg);
+		opacity: 1
+	  }
+  }
+
+  @keyframes filll2 {
+	0% {
+	  transform: rotate(0deg);
+	  bottom: 50px;
+	  opacity: 1
+	}
+	50% {
+	  transform: rotate(-20deg);
+	  opacity: 0.5;
+	}
+	100% {
+	  transform: rotate(0deg);
+	  opacity: 1
+	}
+  }
+
+  @keyframes filll3 {
+	0% {
+	  transform: rotate(0deg);
+	  opacity: 1
+	}
+	25% {
+	  transform: rotate(-2deg);
+	  opacity: 0.8;
+	}
+	75% {
+		transform: rotate(2deg);
+		opacity: 0.8;
+	  }
+	100% {
+	  transform: rotate(0deg);
+	  opacity: 1
+	}
+  }
+  @keyframes filll4 {
+	0% {
+	  left: 10px;
+	  opacity: 1
+	}
+	25% {
+		left: 20px;
+	  opacity: 0.8;
+	}
+	75% {
+		left: 30px;
+		opacity: 0.8;
+	  }
+	100% {
+		left: 50px;
+	  opacity: 1
+	}
+  }
+
+
+  
+  .form-box p{
+	font-size: 10px;
+	padding: 0px;
+  }
+
+.ball {
+	background: #fff;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 5px solid #1c3c4f;
+	z-index: 9999;
+	position: relative;
+	overflow: hidden;
+	transition: 6s;
+	// animation-name: ball;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+
+	.connect {
+		position: absolute;
+		height: 5px;
+		width: 100px;
+		background: #1c3c4f;
+
+		&.one {
+			margin-top: 25px;
+		}
+
+		&.two {
+			margin-top: 65px;
+			transform: rotate(65deg);
+			margin-left: -30px;
+		}
+
+		&.three {
+			margin-top: 65px;
+			margin-left: 30px;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__inner {
+		width: 65px;
+		height: 65px;
+		border-radius: 50%;
+		background: #fdc23e;
+		position: absolute;
+		display: flex;
+		border: 5px solid #1c3c4f;
+
+		&.one {
+			margin-top: 70px;
+		}
+
+		&.two {
+			margin-left: 50px;
+		}
+
+		&.three {
+			margin-left: -35px;
+			margin-top: -10px;
+		}
+
+		.inside {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 5px solid #1c3c4f;
+			margin: auto;
+			background: #a7d0e0;
+		}
+	}
+}
