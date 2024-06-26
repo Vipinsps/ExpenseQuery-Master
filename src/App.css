@@ -429,9 +429,15 @@ select{
 .select-options{
   display: flex;
     flex-direction: column;
-    color: green;
+    color: rgba(255, 0, 0, 0.849);
     font-size: 10px;
     font-weight: 500;
     font-style: oblique;
     width: 100%;
+}
+
+.head1{
+  font-size: 14px;
+  font-weight: 600;
+  color: #015871 !important;
 }

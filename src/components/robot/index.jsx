@@ -1,6 +1,9 @@
 import React from 'react'
 
-const Robot = ({isAnimating,loading,category,month,ani}) => {
+const Robot = ({isAnimating,loading,category,month,ani,model}) => {
+  // loading when data is fethced from api
+  // isAnimating is when sending the query and selecting 
+  // when we have category, model and month the ani is true
   return (
     <div
             className={`robot-container ${
@@ -8,7 +11,7 @@ const Robot = ({isAnimating,loading,category,month,ani}) => {
             }`}
           >
             <div className="universe">
-              {isAnimating && !loading && !ani && (
+              {isAnimating && !month &&(
                 <span className="cooking">Something is cooking...</span>
               )}
               {loading && (
@@ -19,11 +22,12 @@ const Robot = ({isAnimating,loading,category,month,ani}) => {
                   Am here to help you happily.
                 </span>
               )}
-              {((!isAnimating && category) || (!isAnimating && month)) && (
+              {(isAnimating && !ani && month) && (
                 <span className="cooking2">
                   Interesting you are adding.
                 </span>
               )}
+              {/* // when all inputs are available then it will work */}
               {ani && !loading && (
                 <span className="cooking3">Waiting you to hit Go</span>
               )}
