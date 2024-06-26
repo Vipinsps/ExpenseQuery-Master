@@ -392,10 +392,17 @@ background-color: red !important;
   .chat-box {
     height: 100%;
     width: 100%;
-    padding: 0px;
+    padding: 5px;
   }
- 
-}
+  .data-box{
+    height: 100%;
+    min-height: 35vh !important;
+    max-height: 100vh !important }
+    .universe{
+      height: 50vh !important;
+    }
+
+ }
 
 @media only screen and (max-width: 790px) {
   .wave1{
@@ -407,4 +414,24 @@ background-color: red !important;
   .ocean{
     overflow: hidden;
   }
+}
+
+select{
+  width: 100%;
+}
+
+.select-wrapper{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.select-options{
+  display: flex;
+    flex-direction: column;
+    color: green;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: oblique;
+    width: 100%;
 }
