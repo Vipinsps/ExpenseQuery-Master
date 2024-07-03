@@ -64,7 +64,7 @@ const FormComponent = () => {
 
   const handleOpenAi = async () => {
     try {
-      const response = await fetch("http://localhost:8000/predict_expense/", {
+      const response = await fetch(process.env.REACT_APP_OPENAI_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +95,7 @@ const FormComponent = () => {
   const handleScikit = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/predict_expense_regression/",
+       process.env.REACT_APP_OPENAI_URL,
         {
           method: "POST",
           headers: {
