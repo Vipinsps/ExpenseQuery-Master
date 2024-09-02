@@ -396,10 +396,11 @@ background-color: red !important;
   }
   .data-box{
     height: 100%;
+    overflow: hidden;
     min-height: 35vh !important;
     max-height: 100vh !important }
     .universe{
-      height: 50vh !important;
+      height: 60vh !important;
     }
 
  }
@@ -440,4 +441,11 @@ select{
   font-size: 14px;
   font-weight: 600;
   color: #015871 !important;
+}
+
+.head-style{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

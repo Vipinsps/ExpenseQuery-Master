@@ -45,14 +45,17 @@ const FormComponent = () => {
     setIsAnimating(true);
     if (!month) {
       alert("Please select a month for prediction.");
+      animatonFuntion()
       return;
     }
     if (!category) {
       alert("Please select a category for prediction.");
+      animatonFuntion()
       return;
     }
     if (!model) {
       alert("Please select a Model for prediction.");
+      animatonFuntion()
       return;
     }
     if (model === "Scikit") {
@@ -95,7 +98,7 @@ const FormComponent = () => {
   const handleScikit = async () => {
     try {
       const response = await fetch(
-       process.env.REACT_APP_OPENAI_URL,
+        process.env.REACT_APP_SCIKIT_URL,
         {
           method: "POST",
           headers: {
@@ -156,6 +159,12 @@ const FormComponent = () => {
       } else setAni(false);
     }
   });
+
+
+  const animatonFuntion=()=>{
+    setIsAnimating(false);
+    setLoading(false);
+  }
 
   const resetAll = async () => {
     setIsAnimating(false);
@@ -219,7 +228,7 @@ const FormComponent = () => {
           />
           <div className="select-wrapper">
             <div className="select-options">
-              <p>Select Model*</p>
+              <p>Select Model</p>
               <select
                 name="model"
                 value={model}
